@@ -82,72 +82,79 @@ class PageOne extends StatelessWidget {
               style: MainCss.bodyOne(context),
               child: Division(
                 style: MainCss.bodyTwo(context),
-                child: Division(
-                  style: MainCss.body(context),
-                  child: Column(
-                    children: <Widget>[
+                child: SingleChildScrollView(
+                  child: Division(
+                    style: MainCss.body(context),
+                    child: Column(
+                      children: <Widget>[
 
-                      // label
-                      Division(
-                        style: MainCss.label(context),
-                        child: Text(
-                          'Leave Request',
-                          style: MainCss.labelText(context),
-                        ),
-                      ),
-
-                      // textfield
-                      Division(
-                        style: MainCss.textField(context),
-                        child: TextFormField(
-                          style: MainCss.textFieldStyle(context),
-                          decoration: InputDecoration(
-                            //hintText: "Start Date",
-                            labelText: 'Start Date',
-                            prefixIcon: Icon(IcoFontIcons.uiCalendar,
-                                color: Colors.black, size: 18),
-                            fillColor: Colors.white,
-                            labelStyle: MainCss.textFieldStyle(context),
-                            enabledBorder: MainCss.textFieldStyleOutline(context),
-                            focusedBorder: MainCss.textFieldStyleOutline(context),
-                            border: MainCss.textFieldStyleOutline(context),
+                        // label
+                        Division(
+                          style: MainCss.label(context),
+                          child: Text(
+                            'Leave Request',
+                            style: MainCss.labelText(context),
                           ),
                         ),
-                      ),
 
-                      // submit
-                      Division(
-                        style: MainCss.buttonPrimary(context),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Icon(IcoFontIcons.save, color: Colors.white, size: 20),
-                            Division(
-                                style: StyleClass()..margin(left: 5),
-                                child: Text(
-                                  'Save As Draft',
-                                  //maxLines: ,
-                                  //overflow: TextOverflow.ellipsis,
-                                  style: MainCss.buttonPrimaryText(context),
-                                ))
-                          ],
+                        // textfield
+                        Division(
+                          style: MainCss.textField(context),
+                          child: TextFormField(
+                            style: MainCss.textFieldStyle(context),
+                            decoration: InputDecoration(
+                              //hintText: "Start Date",
+                              labelText: 'Start Date',
+                              prefixIcon: Icon(IcoFontIcons.uiCalendar,
+                                  color: Colors.black, size: 18),
+                              fillColor: Colors.white,
+                              labelStyle: MainCss.textFieldStyle(context),
+                              enabledBorder: MainCss.textFieldStyleOutline(context),
+                              focusedBorder: MainCss.textFieldStyleOutline(context),
+                              border: MainCss.textFieldStyleOutline(context),
+                            ),
+                          ),
                         ),
-                        gesture: GestureClass()
-                          ..onTap(() {
-                            print('draft');
-                          }),
-                      ),
+
+                        // submit
+                        Division(
+                          style: MainCss.buttonPrimary(context),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(IcoFontIcons.save, color: Colors.white, size: 20),
+                              Division(
+                                  style: StyleClass()..margin(left: 5),
+                                  child: Text(
+                                    'Save As Draft',
+                                    //maxLines: ,
+                                    //overflow: TextOverflow.ellipsis,
+                                    style: MainCss.buttonPrimaryText(context),
+                                  ))
+                            ],
+                          ),
+                          gesture: GestureClass()
+                            ..onTap(() {
+                              print('draft');
+                            }),
+                        ),
 
 
-                      Division(
-                        style :
-                              StyleClass()
-                                ..add(MainCss.styleOne(context))
-                                ..add(MainCss.styleTwo(context), override: true)
-                            ,
-                        //MainCss.styleOne(context),
-                        child : Text('sd') ,
-                      )
+                        Division(
+                          style :
+                                StyleClass()
+                                  ..add(MainCss.styleOne(context))
+                                  ..add(MainCss.styleTwo(context), override: true)
+                              ,
+                          //MainCss.styleOne(context),
+                          child : Text('sd') ,
+                        ),
+
+
+
+
+// ---- DUMMY --- //
+
 
 
 
@@ -190,40 +197,180 @@ class PageOne extends StatelessWidget {
 //                        }),
 //                      ),
 //
-//                  Division(
-//                      style: MainCss.classMain(context),
-//                      child: Row(
-//                        children: <Widget>[
-//                          Flexible(
-//                            flex: 2,
-//                            fit: FlexFit.tight,
-//                            child: Division(
-//                              style: MainCss.classOne(context),
-//                              child:Text('testing')
-//                            ),
-//                          ),
-//                          Flexible(
-//                            flex: 4,
-//                            fit: FlexFit.tight,
-//                            child: Division(
-//                              style: MainCss.classTwo(context),
-//                                child:Text('test')
-//                            ),
-//                          ),
-//                          Flexible(
-//                            flex: 1,
-//                            fit: FlexFit.tight, // sama dengan expanded
-//                            child: Division(
-//                              style: MainCss.classThree(context),
-//                                child:
-//                                    Text('ssss', style: MainCss.labelText(context)),
-//                            ),
-//                          ),
-//                        ],
-//                      )),
+                    Division(
+                        style: MainCss.classMain(context),
+                        child: Row(
+                          children: <Widget>[
+                            Flexible(
+                              flex: 2,
+                              fit: FlexFit.tight,
+                              child: Division(
+                                style: MainCss.classOne(context),
+                                child:Text('testing')
+                              ),
+                            ),
+                            Flexible(
+                              flex: 4,
+                              fit: FlexFit.tight,
+                              child: Division(
+                                style: MainCss.classTwo(context),
+                                  child:Text('test')
+                              ),
+                            ),
+                            Flexible(
+                              flex: 1,
+                              fit: FlexFit.tight, // sama dengan expanded
+                              child: Division(
+                                style: MainCss.classThree(context),
+                                  child:
+                                      Text('ssss', style: MainCss.labelText(context)),
+                              ),
+                            ),
+                          ],
+                        )),
 
 
-                    ],
+                        Division(
+                            style: MainCss.classMain(context),
+                            child: Row(
+                              children: <Widget>[
+                                Flexible(
+                                  flex: 2,
+                                  fit: FlexFit.tight,
+                                  child: Division(
+                                      style: MainCss.classOne(context),
+                                      child:Text('testing')
+                                  ),
+                                ),
+                                Flexible(
+                                  flex: 4,
+                                  fit: FlexFit.tight,
+                                  child: Division(
+                                      style: MainCss.classTwo(context),
+                                      child:Text('test')
+                                  ),
+                                ),
+                                Flexible(
+                                  flex: 1,
+                                  fit: FlexFit.tight, // sama dengan expanded
+                                  child: Division(
+                                    style: MainCss.classThree(context),
+                                    child:
+                                    Text('ssss', style: MainCss.labelText(context)),
+                                  ),
+                                ),
+                              ],
+                            )),
+
+                        Division(
+                            style: MainCss.classMain(context),
+                            child: Row(
+                              children: <Widget>[
+                                Flexible(
+                                  flex: 2,
+                                  fit: FlexFit.tight,
+                                  child: Division(
+                                      style: MainCss.classOne(context),
+                                      child:Text('testing')
+                                  ),
+                                ),
+                                Flexible(
+                                  flex: 4,
+                                  fit: FlexFit.tight,
+                                  child: Division(
+                                      style: MainCss.classTwo(context),
+                                      child:Text('test')
+                                  ),
+                                ),
+                                Flexible(
+                                  flex: 1,
+                                  fit: FlexFit.tight, // sama dengan expanded
+                                  child: Division(
+                                    style: MainCss.classThree(context),
+                                    child:
+                                    Text('ssss', style: MainCss.labelText(context)),
+                                  ),
+                                ),
+                              ],
+                            )),
+
+                        Division(
+                            style: MainCss.classMain(context),
+                            child: Row(
+                              children: <Widget>[
+                                Flexible(
+                                  flex: 2,
+                                  fit: FlexFit.tight,
+                                  child: Division(
+                                      style: MainCss.classOne(context),
+                                      child:Text('testing')
+                                  ),
+                                ),
+                                Flexible(
+                                  flex: 4,
+                                  fit: FlexFit.tight,
+                                  child: Division(
+                                      style: MainCss.classTwo(context),
+                                      child:Text('test')
+                                  ),
+                                ),
+                                Flexible(
+                                  flex: 1,
+                                  fit: FlexFit.tight, // sama dengan expanded
+                                  child: Division(
+                                    style: MainCss.classThree(context),
+                                    child:
+                                    Text('ssss', style: MainCss.labelText(context)),
+                                  ),
+                                ),
+                              ],
+                            )),
+
+                        Division(
+                            style: MainCss.classMain(context),
+                            child: Row(
+                              children: <Widget>[
+                                Flexible(
+                                  flex: 2,
+                                  fit: FlexFit.tight,
+                                  child: Division(
+                                      style: MainCss.classOne(context),
+                                      child:Text('testing')
+                                  ),
+                                ),
+                                Flexible(
+                                  flex: 4,
+                                  fit: FlexFit.tight,
+                                  child: Division(
+                                      style: MainCss.classTwo(context),
+                                      child:Text('test')
+                                  ),
+                                ),
+                                Flexible(
+                                  flex: 1,
+                                  fit: FlexFit.tight, // sama dengan expanded
+                                  child: Division(
+                                    style: MainCss.classThree(context),
+                                    child:
+                                    Text('ssss', style: MainCss.labelText(context)),
+                                  ),
+                                ),
+                              ],
+                            )),
+
+// ---- DUMMY --- //
+
+
+
+
+
+
+
+
+
+
+                      ],
+                    ),
                   ),
                 ),
               ),
