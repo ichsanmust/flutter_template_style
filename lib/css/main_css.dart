@@ -64,14 +64,15 @@ class MainCss {
     );
   }
 
-  static OutlineInputBorder textFieldStyleOutline(BuildContext context) {
+  static textFieldStyleOutline(BuildContext context) {
     return OutlineInputBorder(
         borderRadius: BorderRadius.only(
             topLeft: Radius.circular(18.0),
             topRight: Radius.circular(18.0),
             bottomLeft: Radius.circular(18.0),
             bottomRight: Radius.circular(18.0)),
-        borderSide: const BorderSide(color: Colors.grey));
+        borderSide: const BorderSide(color: Colors.grey)
+    );
   }
 
   static buttonPrimary(context) {
